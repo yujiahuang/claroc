@@ -1,0 +1,230 @@
+/* variables */
+
+@speed: 0.1;
+@sm-cover-min-height: 478;
+@xs-cover-min-height: @sm-cover-min-height/2;
+
+/* wrapper */
+
+.wrap.container-fluid.front-page {
+  height: 100%;
+  .content.row {
+    height: 100%;
+    .main {
+      padding-left: 0;
+      padding-right: 0;
+      height: 100%;
+    }
+  }
+}
+
+/* parallax */
+
+.parallax {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  perspective: 1px;
+}
+.cover-img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  min-height: unit(@sm-cover-min-height, px);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateZ(unit(-@speed, px)) scale(@speed+1);
+}
+#cover, #news-board-wrapper, #belt {
+  transform: translateZ(0);
+}
+
+/* cover */
+
+#cover {
+  height: 100%;
+  min-height: unit(@sm-cover-min-height, px);
+  h1, h2, h3, p {
+    margin: 0;
+  }
+  .headline {
+    position: relative;
+    color: @snow;
+    opacity: 0.85;
+    display: table;
+    height: 50%;
+    min-height: @xs-cover-min-height;
+    padding-left: 0;
+    padding-right: 0;
+    @media (min-width: @screen-sm-min){    
+      transform: skew(-30deg, 0deg);
+      height: 100%;
+      min-height: @sm-cover-min-height;
+    }
+    & > * {
+      @media (min-width: @screen-sm-min){    
+        transform: skew(30deg, 0deg);
+      }
+    }
+    div {
+      width: 90%;
+      position: relative;
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 10%;
+      * {
+        text-align: center;
+        width: 100%;
+        display: block;
+      }
+      h2 {
+        margin-bottom: 5%;
+        @media (min-width: @screen-lg-min){
+          font-size: 3.5vw;
+        }
+        @media (min-width: @screen-sm-min) and (max-width: @screen-md-max){
+          font-size: 5vw;
+        }
+        @media (max-width: @screen-xs-max){
+          font-size: 28px;
+        }
+      }
+      p {
+        @media (min-width: @screen-lg-min){
+          font-size: 1.4vw;
+        }
+        @media (min-width: @screen-sm-min) and (max-width: @screen-md-max){
+          font-size: 2vw;
+        }
+        @media (max-width: @screen-xs-max){
+          font-size: 18px;
+        }
+      }
+    }
+    &.left {
+      background-color: @primary-1;
+      @media (min-width: @screen-sm-min) {    
+        &::before {
+          content: "";
+          background-color: @primary-1;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          left: -90%;
+          top: 0;
+        }
+        div {
+          padding: 0 15% 0 0;
+          * {
+            text-align: right;
+          }
+        }
+      }
+    }
+    &.right {
+      background-color: @primary-2;
+      @media (min-width: @screen-sm-min) {
+        &::before {
+          content: "";
+          background-color: @primary-2;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          left: 90%;
+          top: 0;
+        }
+        div {
+          padding: 0 10% 0 5%;
+          * {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* belt */
+
+#belt {
+  width: 100%;
+  height: 50px;
+  background-color: @oil;
+}
+
+/* intro */
+
+#intro {
+  padding: 50px;
+  background-color: @primary-1;
+  h2 {
+    font-size: 36px;
+    text-align: center;
+    color: @snow;
+    border-bottom: 2px solid @snow;
+    padding: 30px 0;
+  }
+  .textwidget {
+    font-size: 20px;
+    color: @snow;
+    margin: 30px 0;
+    line-height: 1.7em;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* icon list */
+
+#icon-list {
+  padding: 15px 0;
+  font-size: 20px;
+  background: @snow;
+  ul {
+    list-style: none;
+    li {
+      color: @oil;
+      text-align: center;
+      padding-top: 30px;
+      margin: 15px 0;
+      &::before {
+        position: absolute;
+        top: 0;
+        text-align: center;
+        width: 100%;
+        left: 0;
+      }
+      a {
+        color: @oil;
+        padding: 45px 40px 15px;
+        font-family: "microsoft jhenghei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        position: relative;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

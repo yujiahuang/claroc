@@ -1,0 +1,36 @@
+.categories {
+  text-align: center;
+  width: 100%;
+  background-color: @smoke;
+  margin-bottom: 40px;
+  ul {
+    list-style: none;
+    li {
+      display: inline-block;
+      width: 100px;
+      position: relative;
+      &.active {
+        background-color: @primary-2;
+        a {
+          color: @snow;
+          &:hover {
+            color: @snow;
+            opacity: 1;
+          }
+        }
+      }
+      a {
+        color: @steel;
+        font-size: 14px;
+        opacity: 0.8;
+        width: 100%;
+        display: inline-block;
+        padding: 10px 0;
+        &:hover {
+          color: @steel;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

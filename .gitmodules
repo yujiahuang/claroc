@@ -1,0 +1,3 @@
+[submodule "sage"]
+	path = ./wp-content/theme/impact
+	url = https://github.com/roots/sage.git
