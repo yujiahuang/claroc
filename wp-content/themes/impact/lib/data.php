@@ -29,7 +29,7 @@ function get_data() {
     $args = array(
       'posts_per_page'   => 5,
       'offset'           => 0,
-      'category'         => '',
+      'category'         => $c->term_id,
       'category_name'    => '',
       'orderby'          => 'post_date',
       'order'            => 'DESC',
