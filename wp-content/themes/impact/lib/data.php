@@ -5,6 +5,16 @@ define( "NUM_ABBR_WORDS", 50 );
 add_action( 'wp_ajax_get_data', 'get_data' );
 add_action( 'wp_ajax_nopriv_get_data', 'get_data' );
 
+function get_excerpt_by_id( $post_id ){
+  global $post;  
+  $save_post = $post;
+  $post = get_post($post_id);
+  setup_postdata( $post );
+  $output = get_the_excerpt();
+  $post = $save_post;
+  return $output;
+}
+
 function get_data() {
 
   $all_posts = array();
@@ -45,14 +55,7 @@ function get_data() {
     );
     $posts = get_posts( $args );
     foreach ($posts as &$p) {
-      $content = $p->post_content;
-      if(strstr($content, '<!--more-->') != false){
-        $p->post_content = strstr($content, '<!--more-->', true).'...';
-      }
-      else {
-        $p->post_content = (strlen($content) > ( NUM_ABBR_WORDS*3 + 3) ) ? 
-          substr($content, 0, NUM_ABBR_WORDS*3).'...' : $content;
-      }
+      $p->post_content = get_excerpt_by_id($p->ID);
     }
     $all_posts[$c->name] = array('posts' => $posts, 'url' => get_category_link( $c->term_id ));
   }

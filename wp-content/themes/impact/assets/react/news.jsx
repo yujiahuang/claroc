@@ -64,8 +64,8 @@ var NewsList = React.createClass({
     var newsNodes = this.props.content.map(function (news) {
       return (
         <News title={news.post_title} url={news.guid}>
-          {news.post_content}
-        </News>
+        </News>          
+
       );
     });
     return (
@@ -83,7 +83,6 @@ var News = React.createClass({
         <h2 className="news-title">
           <a href={this.props.url}>{this.props.title}</a>
         </h2>
-        {this.props.children}
       </div>
     );
   }
