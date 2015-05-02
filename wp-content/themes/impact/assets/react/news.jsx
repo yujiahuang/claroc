@@ -1,5 +1,5 @@
 var icons = {
-  "其他": "list-alt",
+  "其他公告": "list-alt",
   "學會公告": "star",
   "學術演講訊息": "blackboard",
   "徵才啟事": "user",
@@ -90,7 +90,7 @@ var News = React.createClass({
 });
 
 React.render(
-  <NewsBoard url="/wp-admin/admin-ajax.php" />,
+  <NewsBoard url="/claroc/wp-admin/admin-ajax.php" />,
   document.getElementById('news-board-wrapper')
 );
 
