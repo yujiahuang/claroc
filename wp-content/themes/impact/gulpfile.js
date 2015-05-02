@@ -307,7 +307,7 @@ gulp.task('watch-dev', function() {
 // ### Development Build
 // `gulp dev-build` - Run simpler build tasks
 // Generally you should be running `gulp dev` instead of `gulp dev-build`.
-gulp.task('dev-build', function(callback) {
+gulp.task('build-dev', function(callback) {
   runSequence('styles-dev',
               'scripts-dev',
               'react',
@@ -342,7 +342,7 @@ gulp.task('wiredep', function() {
 // ### Development Build
 // `gulp dev` - Run a simpler, faster build. To compile for production run `gulp --production`.
 gulp.task('dev', ['clean'], function() {
-  gulp.start('dev-build');
+  gulp.start('build-dev');
 });
 
 // ### Gulp
