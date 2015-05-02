@@ -6896,6 +6896,10 @@ article .entry-content p {
   line-height: 1.9em;
   margin-bottom: 20px;
 }
+article img {
+  max-width: 100%;
+  height: auto;
+}
 .comment-list ol {
   list-style: none;
 }
