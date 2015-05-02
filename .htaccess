@@ -8,7 +8,7 @@ RewriteBase /claroc/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteCond %{REQUEST_HOST} ^localhost:8888
+# RewriteCond %{HTTP_HOST} ^localhost:8888
 RewriteRule . /claroc/index.php [L]
 </IfModule>
 
@@ -20,7 +20,7 @@ RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_HOST} ^http://claroc.herokuapp.com/
+RewriteCond %{HTTP_HOST} ^http://claroc.herokuapp.com/
 RewriteRule . /index.php [L]
 </IfModule>
 
