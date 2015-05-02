@@ -1,5 +1,5 @@
-# BEGIN WordPress
-
+<if "%{HTTP_HOST} == 'localhost:8888'">
+    
 # Development
 
 <IfModule mod_rewrite.c>
@@ -8,9 +8,12 @@ RewriteBase /claroc/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{HTTP_HOST} ^localhost:8888
 RewriteRule . /claroc/index.php [L]
 </IfModule>
+
+</if>
+
+<if "%{HTTP_HOST} == 'claroc.herokuapp.com'">
 
 # Production
 
@@ -20,8 +23,8 @@ RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteCond %{HTTP_HOST} ^claroc.herokuapp.com
 RewriteRule . /index.php [L]
 </IfModule>
+    
+</if>
 
-# END WordPress
