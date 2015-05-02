@@ -7379,7 +7379,7 @@ footer.content-info .container {
 }
 @media (min-width: 768px) {
   #news-board-wrapper .news-box {
-    height: 720px;
+    height: 780px;
   }
 }
 #news-board-wrapper .news-box .category-title {
@@ -7406,14 +7406,20 @@ footer.content-info .container {
   vertical-align: middle;
 }
 #news-board-wrapper .news-box .news-list .news {
-  padding: 8px 0;
+  height: 130px;
+  overflow: hidden;
 }
-#news-board-wrapper .news-box .news-list .news span {
+#news-board-wrapper .news-box .news-list .news div {
   color: #666666;
   font-size: 16px;
+  height: 44px;
+  overflow: hidden;
 }
 #news-board-wrapper .news-box .news-list .news h2.news-title {
   padding: 10px 0;
+  height: 86px;
+  display: block;
+  overflow: hidden;
 }
 #news-board-wrapper .news-box .news-list .news h2.news-title a {
   color: #5a4d2d;

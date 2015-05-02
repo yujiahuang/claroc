@@ -63,9 +63,9 @@ var NewsList = React.createClass({displayName: "NewsList",
 
     var newsNodes = this.props.content.map(function (news) {
       return (
-        React.createElement(News, {title: news.post_title, url: news.guid}
-        )          
-
+        React.createElement(News, {title: news.post_title, url: news.guid}, 
+          news.post_content
+        )
       );
     });
     return (
@@ -82,7 +82,8 @@ var News = React.createClass({displayName: "News",
       React.createElement("div", {className: "news"}, 
         React.createElement("h2", {className: "news-title"}, 
           React.createElement("a", {href: this.props.url}, this.props.title)
-        )
+        ), 
+        React.createElement("div", null, this.props.children)
       )
     );
   }
