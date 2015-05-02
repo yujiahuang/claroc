@@ -1,10 +1,26 @@
 # BEGIN WordPress
+
+# Development
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /claroc/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_HOST} ^localhost:8888
+RewriteRule . /claroc/index.php [L]
+</IfModule>
+
+# Production
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_HOST} ^claroc.herokuapp.com
 RewriteRule . /index.php [L]
 </IfModule>
 

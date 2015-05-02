@@ -1,9 +1,29 @@
-.container#page-content {
+#page-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 40px;
-  p {
+  p, li {
+    color: @oil;
     font-size: 16px;
     line-height: 1.7em;
-    color: @oil;
+  }
+  p, ol, ul {
+    margin-bottom: 20px;
+  }
+  ol, ul {
+    padding: 0 0 0 49px;
+    text-indent: -17px;
+    list-style-position: inside;
+  }
+  blockquote {
+    padding: 20px 0 0 0;
+    border-left: none;
+    border-top: 1px solid @gainsboro;
+    p {
+      font-size: 14px;
+      color: @steel;
+    }
   }
 }

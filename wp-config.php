@@ -70,7 +70,7 @@ $table_prefix  = 'wp_';
  * in their development environments.
  */
 define('WP_DEBUG', false);
-// define('WP_ENV', 'development');
+define('WP_ENV', 'development');
 
 /* That's all, stop editing! Happy blogging. */
 
