@@ -90,7 +90,7 @@ var News = React.createClass({
 });
 
 React.render(
-  <NewsBoard url="/wp-admin/admin-ajax.php" />,
+  <NewsBoard url="/claroc/wp-admin/admin-ajax.php" />,
   document.getElementById('news-board-wrapper')
 );
 

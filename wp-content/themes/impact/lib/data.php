@@ -37,10 +37,10 @@ function get_data() {
       'exclude'          => '',
       'meta_key'         => '',
       'meta_value'       => '',
-      'post_type'        => 'post',
+      'post_type'        => '',
       'post_mime_type'   => '',
       'post_parent'      => '',
-      'post_status'      => '',
+      'post_status'      => 'publish',
       'suppress_filters' => true 
     );
     $posts = get_posts( $args );
