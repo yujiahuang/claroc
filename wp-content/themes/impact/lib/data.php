@@ -40,7 +40,7 @@ function get_data() {
       'post_type'        => 'post',
       'post_mime_type'   => '',
       'post_parent'      => '',
-      'post_status'      => 'publish',
+      'post_status'      => '',
       'suppress_filters' => true 
     );
     $posts = get_posts( $args );
