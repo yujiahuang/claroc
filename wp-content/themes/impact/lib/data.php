@@ -12,6 +12,7 @@ function get_excerpt_by_id( $post_id ){
   setup_postdata( $post );
   $output = get_the_excerpt();
   $post = $save_post;
+  $output = strstr($output, '&hellip;', true);
   return $output;
 }
 
@@ -55,7 +56,7 @@ function get_data() {
     );
     $posts = get_posts( $args );
     foreach ($posts as &$p) {
-      $p->post_content = get_excerpt_by_id($p->ID);
+      $p->excerpt = get_excerpt_by_id($p->ID);
     }
     $all_posts[$c->name] = array('posts' => $posts, 'url' => get_category_link( $c->term_id ));
   }
