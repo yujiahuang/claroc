@@ -149,8 +149,11 @@
 /* intro */
 
 #intro {
-  padding: 50px;
   background-color: @primary-1;
+  padding: 0 10px;
+  @media(min-width: @screen-sm-min) {
+    padding: 50px;
+  }
   section {
     width: 100%;
     max-width: 800px;
@@ -182,6 +185,8 @@
   background: @snow;
   ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
     li {
       color: @oil;
       text-align: center;
