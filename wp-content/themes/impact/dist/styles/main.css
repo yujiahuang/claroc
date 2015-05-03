@@ -7318,20 +7318,25 @@ footer.content-info .container {
   padding: 50px;
   background-color: #4f163a;
 }
-#intro h2 {
+#intro section {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#intro section h2 {
   font-size: 36px;
   text-align: center;
   color: #f9f9f9;
   border-bottom: 2px solid #f9f9f9;
   padding: 30px 0;
 }
-#intro .textwidget {
+#intro section .textwidget {
   font-size: 20px;
   color: #f9f9f9;
   margin: 30px 0;
   line-height: 1.7em;
 }
-#intro .textwidget p {
+#intro section .textwidget p {
   margin-bottom: 20px;
 }
 /* icon list */
