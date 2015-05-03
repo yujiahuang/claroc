@@ -6821,6 +6821,15 @@ a:hover {
 hr {
   border-top: 1px solid #dddddd;
 }
+blockquote {
+  padding: 20px 0 0 0;
+  border-left: none;
+  border-top: 1px solid #dddddd;
+}
+blockquote p {
+  font-size: 14px;
+  color: #666666;
+}
 .wrap.container-fluid {
   padding-top: 106px;
   background-color: #f6f6f6;
@@ -7548,13 +7557,4 @@ footer.content-info .container {
   padding: 0 0 0 49px;
   text-indent: -17px;
   list-style-position: inside;
-}
-#page-content blockquote {
-  padding: 20px 0 0 0;
-  border-left: none;
-  border-top: 1px solid #dddddd;
-}
-#page-content blockquote p {
-  font-size: 14px;
-  color: #666666;
 }
