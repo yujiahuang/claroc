@@ -24,7 +24,7 @@ function get_data() {
     'type'                     => 'post',
     'child_of'                 => 0,
     'parent'                   => '',
-    'orderby'                  => 'id',
+    'orderby'                  => 'term_order',
     'order'                    => 'ASC',
     'hide_empty'               => 0,
     'hierarchical'             => 1,
