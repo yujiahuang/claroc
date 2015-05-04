@@ -24,7 +24,7 @@ function get_data() {
     'type'                     => 'post',
     'child_of'                 => 0,
     'parent'                   => '',
-    'orderby'                  => 'term_order',
+    'orderby'                  => 'name',
     'order'                    => 'ASC',
     'hide_empty'               => 0,
     'hierarchical'             => 1,
@@ -35,6 +35,15 @@ function get_data() {
     'pad_counts'               => false 
   ); 
   $categories = get_categories( $args );
+
+  // sort categories by description
+  function cmp($a, $b) {
+    if ($a->description[0] == $b->description[0]) {
+      return 0;
+    }
+    return ($a->description[0] < $b->description[0]) ? -1 : 1;
+  }
+  uasort($categories, 'cmp');
 
   foreach ($categories as $c) {
     $args = array(
