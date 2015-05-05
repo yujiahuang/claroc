@@ -66,6 +66,7 @@ function get_data() {
     $posts = get_posts( $args );
     foreach ($posts as &$p) {
       $p->excerpt = get_excerpt_by_id($p->ID);
+      $p->post_permalink = get_post_permalink($p->ID);
     }
     $all_posts[$c->name] = array('posts' => $posts, 'url' => get_category_link( $c->term_id ));
   }

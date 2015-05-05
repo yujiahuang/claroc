@@ -63,7 +63,7 @@ var NewsList = React.createClass({displayName: "NewsList",
 
     var newsNodes = this.props.content.map(function (news) {
       return (
-        React.createElement(News, {title: news.post_title, url: news.guid}, 
+        React.createElement(News, {title: news.post_title, url: news.post_permalink}, 
           news.excerpt
         )
       );
