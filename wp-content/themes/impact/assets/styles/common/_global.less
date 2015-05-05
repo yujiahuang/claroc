@@ -28,6 +28,23 @@ blockquote {
     color: @steel !important;
   }
 }
+table {
+  border: 1px solid @gainsboro;
+  thead {
+    tr {
+      th {
+        border-right: 1px solid @gainsboro;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        border-right: 1px solid @gainsboro;
+      }
+    }
+  }
+}
 
 .wrap.container-fluid {
   padding-top: @nav-height-collapse;
@@ -112,5 +129,35 @@ article {
   img {
     max-width: 100%;
     height: auto;
+  }
+}
+
+.tab-content {
+  font-size: 16px;
+  line-height: 1.7em;
+  section.active {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 auto;
+    @media(min-width: @screen-sm-min) {
+      padding: 30px 50px;
+    }
+    h1 {
+      color: @primary-2;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 40px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid @primary-2;
+    }
+    ul {
+      padding-left: 18px;
+      @media(max-width: @screen-xs-max) {
+        ul {
+          padding-left: 0;
+        }
+      }
+    }
   }
 }

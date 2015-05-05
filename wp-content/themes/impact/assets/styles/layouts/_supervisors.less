@@ -1,0 +1,56 @@
+#supervisors {
+  padding-top: 40px;
+  #select-year.dropdown {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: @smoke;
+    a#dropdown-label {
+      border: none;
+      background-color: transparent;
+      color: @steel;
+      &:focus, &:hover {
+        text-decoration: none;
+      }
+    }
+    ul.dropdown-menu {
+      box-shadow: none;
+      border: none;
+      border-radius: 0;
+      width: 100%;
+      text-align: center;
+      background-color: @smoke;
+      padding: 0;
+      margin: 0;
+      li {
+        a {
+          color: @steel;
+          padding: 10px 0;
+          &:hover {
+            background-color: transparent;
+            color: @primary-2;
+          }
+        }
+        &.active {
+          a {
+            background-color: @primary-1;
+            color: @snow;
+          }
+        }
+      }
+    }
+  }
+  .tab-content {
+    section.active {
+      max-width: 1000px;
+      h1 {
+        &::before {
+          content: "第 ";
+        }
+        &::after {
+          content: " 屆理監事資料";
+        }
+      }
+    }
+  }
+}

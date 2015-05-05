@@ -89,5 +89,14 @@ function widgets_init() {
     'before_title'  => '<h1>',
     'after_title'   => '</h1>'
   ]);
+
+  register_sidebar([
+    'name'          => __('Supervisors', 'sage'),
+    'id'            => 'sidebar-supervisors',
+    'before_widget' => '<section class="widget %1$s %2$s tab-pane" id="%1$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h1>',
+    'after_title'   => '</h1>'
+  ]);
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
