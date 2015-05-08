@@ -16,9 +16,9 @@
           foreach($widgets as $w) {
             $option_name = $wp_registered_widgets[$w]['callback'][0]->option_name;
             $widget_data = get_option($option_name);
-            $id = str_replace("wp_editor_widget-", "", $w);
+            $id = str_replace("black-studio-tinymce-", "", $w);
             $title = $widget_data[$id]['title'];
-            print_r($widget_data);
+            print_r($id);
             if($i == 0) {
               echo '<li class="active"><a href="#'.$w.'" data-toggle="tab">第 '.$title.' 屆理監事</a></li>';
               $default_title = "第 ".$title." 屆理監事";
