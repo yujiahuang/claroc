@@ -14,8 +14,8 @@
  * @package WordPress
  */
 
-define('WP_HOME','http://claroc.tw');
-define('WP_SITEURL','http://claroc.tw');
+// define('WP_HOME','http://claroc.tw');
+// define('WP_SITEURL','http://claroc.tw');
 
 // ** Heroku Postgres settings - from Heroku Environment ** //
 // if DATABASE_URL not exists (i.e. in development), use some static uri
