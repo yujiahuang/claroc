@@ -18,7 +18,6 @@
             $widget_data = get_option($option_name);
             $id = str_replace("black-studio-tinymce-", "", $w);
             $title = $widget_data[$id]['title'];
-            print_r($id);
             if($i == 0) {
               echo '<li class="active"><a href="#'.$w.'" data-toggle="tab">第 '.$title.' 屆理監事</a></li>';
               $default_title = "第 ".$title." 屆理監事";

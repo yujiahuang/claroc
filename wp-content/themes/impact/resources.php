@@ -7,9 +7,9 @@
 <?php while (have_posts()) : the_post(); ?>
   <div id="resources">
     <ul class="nav nav-pills">
+
       <?php 
         $widgets = wp_get_sidebars_widgets()['sidebar-resources'];
-        $i = 0;
         foreach($widgets as $w) {
           $option_name = $wp_registered_widgets[$w]['callback'][0]->option_name;
           $widget_data = get_option($option_name);
