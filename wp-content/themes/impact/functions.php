@@ -23,6 +23,7 @@ $sage_includes = [
   'lib/admin-bar.php',             // Things about adminbar
   'lib/data.php',                  // News data
   'lib/widgets.php',               // Resources widgets
+  'lib/shortcode.php',             // Shortcodes
 ];
 
 foreach ($sage_includes as $file) {
