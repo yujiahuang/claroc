@@ -17,7 +17,6 @@ var NewsBoard = React.createClass({displayName: "NewsBoard",
       dataType: 'json',
       success: function(data) {
         this.setState({data: data});
-        console.log(data);
       }.bind(this),
       error: function(xhr, status, err) {}
     });
