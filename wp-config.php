@@ -72,6 +72,10 @@ $table_prefix  = 'wp_';
 define('WP_DEBUG', false);
 define('WP_ENV', 'development');
 
+/* Reduce Database size */
+define( 'WP_POST_REVISIONS', 3 );
+define( 'AUTOSAVE_INTERVAL', 160 );
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
