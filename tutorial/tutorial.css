@@ -1,0 +1,22 @@
+html, body {
+}
+
+body {
+}
+img {
+  max-width: 100%;
+}
+.tab-content {
+  line-height: 1.7em;
+  font-size: 16px;
+}
+.tab-pane {
+  padding: 30px 5%;
+}
+.tab-pane ol {
+  padding: 0;
+  list-style: decimal inside;
+}
+.tab-pane li {
+  padding: 0 0 30px 0;
+}

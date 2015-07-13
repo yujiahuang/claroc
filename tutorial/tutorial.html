@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CLAROC 使用教學</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="tutorial.css">
+</head>
+<body>
+  <div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#login" aria-controls="login" role="tab" data-toggle="tab">登入後台</a>
+      </li>
+      <li role="presentation">
+        <a href="#create-news" aria-controls="create-news" role="tab" data-toggle="tab">新增最新消息</a>
+      </li>
+      <li role="presentation">
+        <a href="#update-news" aria-controls="update-news" role="tab" data-toggle="tab">更新最新消息</a>
+      </li>
+      <li role="presentation">
+        <a href="#update-history" aria-controls="update-history" role="tab" data-toggle="tab">更新「成立沿革與現況」</a>
+      </li>
+      <li role="presentation">
+        <a href="#update-join" aria-controls="update-join" role="tab" data-toggle="tab">更新「組織與入會方式」</a>
+      </li>
+      <li role="presentation">
+        <a href="#update-supervisors" aria-controls="update-supervisors" role="tab" data-toggle="tab">更新「歷屆理監事」</a>
+      </li>
+      <li role="presentation">
+        <a href="#update-front-page-hero" aria-controls="update-front-page-hero" role="tab" data-toggle="tab">更新首頁大標題</a>
+      </li>
+      <li role="presentation">
+        <a href="#update-front-page-about" aria-controls="update-front-page-about" role="tab" data-toggle="tab">更新首頁下「關於」</a>
+      </li>
+      <li role="presentation">
+        <a href="#update-footer" aria-controls="update-footer" role="tab" data-toggle="tab">更新每頁底部資訊</a>
+      </li>
+      <li role="presentation">
+        <a href="#others" aria-controls="others" role="tab" data-toggle="tab">其他資訊</a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="login">
+        <ol>
+          <li>進到 <a href="http://calroc.tw/wp-admin">http://calroc.tw/wp-admin</a></li>
+          <li>
+            如果還沒登入，則會顯示以下畫面：<br>
+            <img src="images/login.png" alt="[登入畫面圖]"><br>
+            輸入帳號密碼
+          </li>
+          <li>
+            成功登入後，即可看到後台<br>
+            <img src="images/login-success.png" alt="[登入成功畫面圖]"> 
+          </li>
+        </ol>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="create-news">
+        <ol>
+          <li>
+            進入「文章 > 新增文章」<br>
+            <img src="images/new-article.png" alt="[新增文章圖]">
+          </li>
+          <li>
+            輸入標題跟內文（確認是在「預覽」模式）<br>
+            <img src="images/title-and-content.png" alt="[輸入標題與內文圖]"> 
+          </li>
+          <li>
+            如果要插入圖片，則按下「新增媒體」，然後選擇「自網址插入」<br>
+            <img src="images/new-media.png" alt="[新增媒體圖]"> <br>
+            <img src="images/insert-from-url.png" alt="[自網址插入]"><br>
+            在框框中輸入要插入的圖片網址，並按下「插入至文章」<br><br>
+            <div class="alert alert-danger" role="alert">
+              注意！由於所用的是免費 server，所上傳的圖片皆為暫存，會在一定時間後被刪除！所以必須先上傳至別的地方（如 Google Drive、Google Photos）再插入
+            </div>
+          </li>
+          <li>
+            在右方選擇分類後，按下藍色的「發表」按鈕即可發表<br>
+            <img src="images/post.png" alt="[發表文章]"><br><br>
+            <div class="alert alert-danger" role="alert">
+              注意！若沒有選擇分類，則文章會自動分到「未分類」。未分類的文章是不會顯示在網站上的。
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="update-news">
+        <ol>
+          <li>
+            進入「文章 > 全部文章」<br>
+            <img src="images/all-articles.png" alt="[全部文章]">  
+          </li>
+          <li>
+            找到要編輯的文章，點選「編輯」<br>
+            <img src="images/edit-article.png" alt="[編輯文章]">
+          </li>
+          <li>編輯後，記得按下藍色的「發表」按鈕，文章才會更新喔！</li>
+        </ol>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="update-history">
+        <ol>
+          <li>
+            進入「頁面 > 全部頁面」<br>
+            <img src="images/pages.png" alt="[全部頁面]">
+          </li>
+          <li>
+            找到「成立沿革與現況」，點選「編輯」<br>
+            <img src="images/edit-history.png" alt="[編輯]">
+          </li>
+          <li>編輯後，記得按下藍色的「發表」按鈕，頁面才會更新喔！</li>
+        </ol>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="update-join">
+        方法與更新「成立沿革與現況」相同。
+      </div>
+      <div role="tabpanel" class="tab-pane" id="update-supervisors">
+        <ol>
+          <li>
+            進入「外觀 > 小工具」<br>
+            <img src="images/widgets.png" alt="[小工具]">
+          </li>
+          <li>
+            打開「Supervisors」，拖曳左方「Visual Editor」小工具進去<br>
+            <img src="images/drag-widget.png" alt="[拖曳小工具]">
+          </li>
+          <li>標題即為第幾屆的理事會成員</li>
+          <li>
+            內容則類似以下格式：<br>
+            <pre>
+              [table nl="~~"]
+              職位,姓名,現職,學歷
+              第一個職位,名字一,現職第一行~~第二行,學歷第一行~~第二行
+              第二個職位,名字二,現職第一行~~第二行,學歷第一行~~第二行
+              第三個職位,名字三,現職第一行~~第二行,
+              [/table]
+            </pre>
+            這是表格內容的表達方式。<code>[table]</code>和<code>[/table]</code>之間是表格內容；逗號<code>,</code>表示一個直欄；<code>nl="~~"</code>表示每次出現<code>~~</code>就會換行；若儲存格內要留白，則用逗號隔開即可。<br><br>
+            <div class="alert alert-warning" role="alert">
+              這個表格無法加上連結。如果硬是使用 html 的 <code>&lt;a&gt;</code> tag 的話，則有可能導致資料庫被刪掉；目前原因不明。
+            </div>
+            <div class="alert alert-info" role="alert">
+              若想對於表格（他叫做 Easy Table）有更多了解，可以參考以下連結（內容大同小異）：<br>
+              <a href="https://wordpress.org/plugins/easy-table/">https://wordpress.org/plugins/easy-table/</a><br>
+              <a href="http://takien.com/blog/2012/05/21/easy-table-is-the-easiest-way-to-create-table-in-wordpress/">http://takien.com/blog/2012/05/21/easy-table-is-the-easiest-way-to-create-table-in-wordpress/</a>
+            </div>
+          </li>
+          <li>編輯完後，按下藍色「儲存」按鈕即可。</li>
+        </ol>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="update-front-page-hero">
+        <ol>
+          <li>
+            進入「頁面 > 全部頁面」<br>
+            <img src="images/pages.png" alt="[全部頁面]">
+          </li>
+          <li>
+            找到「首頁」，點選「編輯」<br>
+            <img src="images/edit-front-page.png" alt="[編輯]">
+          </li>
+          <li>
+            請選擇「文字」，框內會變成程式碼。<br>
+            <img src="images/text.png" alt="[文字]"><br><br>
+            <div class="alert alert-info" role="alert">
+              由於這邊排版設計比較複雜，所以需要直接編輯程式碼。不過因為內容不多，相信不會太困難！
+            </div>
+          </li>
+          <li>
+            所需要更改的，是以下的中文部分：
+            <pre>
+
+              &lt;div class=&quot;headline left col-sm-6 col-xs-12&quot;&gt;
+              &lt;div&gt;
+              &lt;h2&gt;
+              左邊的標題第一行
+              第二行
+              &lt;/h2&gt;
+              左邊的內文第一行
+              第二行
+              &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;headline right col-sm-6 col-xs-12&quot;&gt;
+              &lt;div&gt;
+              &lt;h2&gt;
+              右邊的標題第一行
+              第二行
+              &lt;/h2&gt;
+              右邊的內文第一行
+              第二行
+              &lt;/div&gt;
+              &lt;/div&gt;
+            </pre>
+            如果不小心讓排版跑掉，可以複製貼上模板 code 再進行修改。若要加上連結，則可以使用以下語法在任何要插入的地方：
+
+            <pre>
+
+              &lt;a href=&quot;要連過去的網址&quot;&gt;要顯示的文字&lt;/div&gt;
+            </pre>
+          </li>
+          <li>編輯後，記得按下藍色的「發表」按鈕，頁面才會更新喔！</li>
+        </ol>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="update-front-page-about">
+        <ol>
+          <li>
+            進入「外觀 > 小工具」<br>
+            <img src="images/widgets.png" alt="[小工具]">
+          </li>
+          <li>
+            找到「Front-Page-Intro」並展開裡面的文字小工具<br>
+            <img src="images/front-page-intro.png" alt="[首頁關於小工具]">
+          </li>
+          <li>
+            編輯完標題跟內容後，按下藍色「儲存」按鈕即可。
+          </li>
+        </ol>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="update-footer">
+        <ol>
+          <li>
+            方法跟更新首頁下「關於」相似。進入小工具後，找到「Footer」小工具，更新裡面的資訊：<br>
+            <img src="images/footer.png" alt="[更新 footer]">
+            <br><br>
+            <div class="alert alert-info" role="alert">
+              [this_year] 表示今年的年份。
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="others">
+        <ol>
+          <li>在「設定」面有許多可以設定的細節。不過在瞭解其作用前不建議任意更動。<br>
+          <img src="images/settings.png" alt="[設定]"><br><br>
+            <div class="alert alert-danger" role="alert">
+              特別是關於網址的部分，若更改可能導致無法進入網站。
+            </div>
+          </li>
+          <li>在「一般」裡面可以設定網站的大標題（網站標題）與副標題（網站描述）：<br>
+            <img src="images/general.png" alt="[一般]">
+          </li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="./jquery-2.1.4.min.js"></script>
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <script src="tutorial.js"></script>
+</body>
+</html>
